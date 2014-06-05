@@ -25,6 +25,7 @@
         <activity android:name=".ui.FlipTextViewActivity" />
         <activity android:name=".ui.FlipButtonViewActivity" />
         <activity android:name=".ui.FlipXmlActivity" />
+        <activity android:name=".ui.FlipComplexActivity" />
 
 	</application>
 

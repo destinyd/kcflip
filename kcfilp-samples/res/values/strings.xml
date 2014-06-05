@@ -2,7 +2,45 @@
 <resources>
 
 	<string name="app_name">kcfilp-samples</string>
-	<string name="action_to_brief">回到Brief</string>
+	<string name="action_to_brief">回到封面</string>
 	<string name="hello_world">Hello world!</string>
+    <string name="detail_text">detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,detail text,detail text,detail text,detail text,detail text,detail text,detail
+        text,detail text,
+    </string>
 
 </resources>

@@ -44,18 +44,7 @@ public class MainActivity extends ListActivity {
         addItem(data, "TextViews", FlipTextViewActivity.class);
         addItem(data, "ButtonViews", FlipButtonViewActivity.class);
         addItem(data, "XML Configuration", FlipXmlActivity.class);
-//        addItem(data, "Buttons", FlipButtonActivity.class);
-//        addItem(data, "Complex Layouts", FlipComplexLayoutActivity.class);
-//        addItem(data, "Async Content", FlipAsyncContentActivity.class);
-//        addItem(data, "Event Listener", FlipTextViewAltActivity.class);
-//        addItem(data, "Horizontal", FlipHorizontalLayoutActivity.class);
-//        addItem(data, "Issue #5", Issue5Activity.class);
-//        addItem(data, "XML Configuration", FlipTextViewXmlActivity.class);
-//        addItem(data, "Fragment", FlipFragmentActivity.class);
-//        addItem(data, "Dynamic Adapter Size", FlipDynamicAdapterActivity.class);
-//        addItem(data, "WebView", FlipWebViewActivity.class);
-//        addItem(data, "Delete page", FlipDeleteAdapterActivity.class);
-//        addItem(data, "Issue #51", Issue51Activity.class);
+        addItem(data, "Complex", FlipComplexActivity.class);
 
         return data;
     }
