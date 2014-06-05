@@ -16,7 +16,6 @@ public class FlipTextViewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
         kcFlip = new KCFlip(this);
         TextView textView = new TextView(this);
@@ -30,7 +29,7 @@ public class FlipTextViewActivity extends Activity {
         kcFlip.setViewBrief(textView);
         kcFlip.setViewDetail(textView1);
 
-        addContentView(kcFlip, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+        setContentView(kcFlip);
     }
 
     @Override

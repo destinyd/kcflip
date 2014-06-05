@@ -3,6 +3,7 @@ package com.github.destinyd;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -34,9 +35,9 @@ public class KCFlip extends FlipViewController implements FlipViewController.Vie
             @Override
             public int getCount() {
                 int count = 0;
-                if(viewBrief != null)
+                if (viewBrief != null)
                     count = 1;
-                if(viewDetail != null)
+                if (viewDetail != null)
                     count = 2;
                 Log.e(TAG, "count:" + count);
                 return count;
@@ -54,7 +55,7 @@ public class KCFlip extends FlipViewController implements FlipViewController.Vie
 
             @Override
             public View getView(int i, View view, ViewGroup viewGroup) {
-                switch (i){
+                switch (i) {
                     case 0:
                         return viewBrief;
                     case 1:
@@ -86,19 +87,49 @@ public class KCFlip extends FlipViewController implements FlipViewController.Vie
         init();
     }
 
-    public void to_brief(){
-        setSelection(0);
+    public void to_brief() {
         setFlipByTouchEnabled(true);
-//        showFlipAnimation();
-    };
+        visual_touch_to_brief();
+    }
 
-    public void to_detail(){
-        setSelection(1);
-    };
+    private void visual_touch_to_brief() {
+        int i;
+        setOnViewFlipListener(null);
+        long time = System.currentTimeMillis();
+        int height = getHeight();
+        MotionEvent motionEvent = MotionEvent.obtain(time, System.currentTimeMillis(), MotionEvent.ACTION_DOWN, 20.0f, 0, 0);
+        onTouchEvent(motionEvent);
+
+        motionEvent = MotionEvent.obtain(time, System.currentTimeMillis(), MotionEvent.ACTION_MOVE, 20.0f, height * 1 /2, 0);
+        onTouchEvent(motionEvent);
+        motionEvent = MotionEvent.obtain(time, System.currentTimeMillis(), MotionEvent.ACTION_UP, 20.0f, height - 1, 0);
+        onTouchEvent(motionEvent);
+    }
+
+    public void to_detail() {
+        visual_touch_to_detail();
+    }
+
+
+    private void visual_touch_to_detail() {
+        int i;
+        setOnViewFlipListener(null);
+        long time = System.currentTimeMillis();
+        int height = getHeight();
+        MotionEvent motionEvent = MotionEvent.obtain(time, System.currentTimeMillis(), MotionEvent.ACTION_DOWN, 20.0f, height - 1, 0);
+        onTouchEvent(motionEvent);
+
+        motionEvent = MotionEvent.obtain(time, System.currentTimeMillis(), MotionEvent.ACTION_MOVE, 20.0f, height * 1 /2, 0);
+        onTouchEvent(motionEvent);
+        motionEvent = MotionEvent.obtain(time, System.currentTimeMillis(), MotionEvent.ACTION_UP, 20.0f, 0, 0);
+        onTouchEvent(motionEvent);
+    }
 
     @Override
     public void onViewFlipped(View view, int position) {
         Log.e(TAG, "onViewFlipped");
-        setFlipByTouchEnabled(false);
+        if(position == 1) {
+            setFlipByTouchEnabled(false);
+        }
     }
 }

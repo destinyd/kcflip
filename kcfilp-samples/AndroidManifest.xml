@@ -23,6 +23,7 @@
 			</intent-filter>
 		</activity>
         <activity android:name=".ui.FlipTextViewActivity" />
+        <activity android:name=".ui.FlipButtonViewActivity" />
 
 	</application>
 
