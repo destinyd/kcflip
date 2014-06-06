@@ -1,6 +1,9 @@
 Android KCFlip
 ============================
-###如何引用此组件：
+本组件主要用于封面显示，向上划像翻书一样切换到详细页显示（详细页可以是ScrollView）
+
+
+##如何引用此组件：
 已经独立成maven项目，mvn install之后可以在项目maven添加以下依赖引用：
 
 ```
@@ -12,7 +15,7 @@ Android KCFlip
 </dependency>
 ```
 
-###需求所需要方法说明
+##需求所需要方法说明
 ```
 public void setViewBrief(View view);
 public void setViewDetail(View view);
@@ -25,7 +28,7 @@ public void to_detail();
 ```
 当调用这两个方法时，分别以翻页动画切换到摘要视图和详细视图。
 
-###注意事项
+##注意事项
 使用时必须重写Activity的onResume和onPause事件
 ```
 @Override
