@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	<string name="app_name">kcfilp-samples</string>
+	<string name="app_name">kcflip-samples</string>
 	<string name="action_to_brief">回到封面</string>
 	<string name="hello_world">Hello world!</string>
     <string name="detail_text">detail text,detail text,detail text,detail text,detail text,detail

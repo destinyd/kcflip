@@ -7,14 +7,14 @@
 
     <parent>
         <groupId>com.github.destinyd</groupId>
-        <artifactId>kcfilp-parent</artifactId>
+        <artifactId>kcflip-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>kcfilp-samples</artifactId>
+    <artifactId>kcflip-samples</artifactId>
     <packaging>apk</packaging>
-    <name>kcfilp-samples - Samples</name>
+    <name>kcflip-samples - Samples</name>
 
     <dependencies>
 
@@ -43,7 +43,7 @@
 
         <dependency>
             <groupId>com.github.destinyd</groupId>
-            <artifactId>kcfilp</artifactId>
+            <artifactId>kcflip</artifactId>
             <type>apklib</type>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>

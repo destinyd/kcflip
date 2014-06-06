@@ -7,14 +7,14 @@
 
     <parent>
         <groupId>com.github.destinyd</groupId>
-        <artifactId>kcfilp-parent</artifactId>
+        <artifactId>kcflip-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>kcfilp</artifactId>
+    <artifactId>kcflip</artifactId>
     <packaging>apklib</packaging>
-    <name>kcfilp - Library</name>
+    <name>kcflip - Library</name>
 
     <dependencies>
 

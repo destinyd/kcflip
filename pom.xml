@@ -5,14 +5,14 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.destinyd</groupId>
-	<artifactId>kcfilp-parent</artifactId>
+	<artifactId>kcflip-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>kcfilp - Parent</name>
+	<name>kcflip - Parent</name>
 
 	<modules>
-        <module>kcfilp</module>
-		<module>kcfilp-samples</module>
+        <module>kcflip</module>
+		<module>kcflip-samples</module>
 	</modules>
 
 
