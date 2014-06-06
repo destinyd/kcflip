@@ -15,13 +15,6 @@
 		<module>kcfilp-samples</module>
 	</modules>
 
-<!---->
-	<!--<properties>-->
-		<!--<src.java.version>1.6</src.java.version>-->
-		<!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
-		<!--<platform.version>4.4.2_r2</platform.version>-->
-		<!--<android.plugin.version>3.8.1</android.plugin.version>-->
-	<!--</properties>-->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,7 +23,7 @@
         <android.plugin.version>3.8.1</android.plugin.version>
         <platform.version>4.4.2_r3</platform.version>
         <compatibility-v4.version>19.1.0</compatibility-v4.version>
-        <gradle.version>1.12</gradle.version>
+        <java.version>1.6</java.version>
     </properties>
 
 	<dependencyManagement>
