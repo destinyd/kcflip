@@ -39,7 +39,7 @@ public class KCFlip extends FlipViewController implements FlipViewController.Vie
                     count = 1;
                 if (viewDetail != null)
                     count = 2;
-                Log.e(TAG, "count:" + count);
+//                Log.e(TAG, "count:" + count);
                 return count;
             }
 
@@ -73,7 +73,7 @@ public class KCFlip extends FlipViewController implements FlipViewController.Vie
         return viewBrief;
     }
 
-    public void setViewBrief(View viewBrief) {
+    public void set_brief_view(View viewBrief) {
         this.viewBrief = viewBrief;
         init();
     }
@@ -82,7 +82,7 @@ public class KCFlip extends FlipViewController implements FlipViewController.Vie
         return viewDetail;
     }
 
-    public void setViewDetail(View viewDetail) {
+    public void set_detail_view(View viewDetail) {
         this.viewDetail = viewDetail;
         init();
     }
@@ -92,23 +92,16 @@ public class KCFlip extends FlipViewController implements FlipViewController.Vie
         visual_touch_to_brief();
     }
 
-    private void visual_touch_to_brief() {
-        int i;
-        setOnViewFlipListener(null);
-        long time = System.currentTimeMillis();
-        int height = getHeight();
-        MotionEvent motionEvent = MotionEvent.obtain(time, System.currentTimeMillis(), MotionEvent.ACTION_DOWN, 20.0f, 0, 0);
-        onTouchEvent(motionEvent);
-
-        motionEvent = MotionEvent.obtain(time, System.currentTimeMillis(), MotionEvent.ACTION_MOVE, 20.0f, height * 1 / 2, 0);
-        onTouchEvent(motionEvent);
-        motionEvent = MotionEvent.obtain(time, System.currentTimeMillis(), MotionEvent.ACTION_UP, 20.0f, height - 1, 0);
-        onTouchEvent(motionEvent);
-        setOnViewFlipListener(this);
-    }
-
     public void to_detail() {
         visual_touch_to_detail();
+    }
+
+    @Override
+    public void onViewFlipped(View view, int position) {
+//        Log.d(TAG, "onViewFlipped");
+        if (position == 1) {
+            setFlipByTouchEnabled(false);
+        }
     }
 
     private void visual_touch_to_detail() {
@@ -125,11 +118,18 @@ public class KCFlip extends FlipViewController implements FlipViewController.Vie
         setOnViewFlipListener(this);
     }
 
-    @Override
-    public void onViewFlipped(View view, int position) {
-        Log.d(TAG, "onViewFlipped");
-        if (position == 1) {
-            setFlipByTouchEnabled(false);
-        }
+    private void visual_touch_to_brief() {
+        int i;
+        setOnViewFlipListener(null);
+        long time = System.currentTimeMillis();
+        int height = getHeight();
+        MotionEvent motionEvent = MotionEvent.obtain(time, System.currentTimeMillis(), MotionEvent.ACTION_DOWN, 20.0f, 0, 0);
+        onTouchEvent(motionEvent);
+
+        motionEvent = MotionEvent.obtain(time, System.currentTimeMillis(), MotionEvent.ACTION_MOVE, 20.0f, height * 1 / 2, 0);
+        onTouchEvent(motionEvent);
+        motionEvent = MotionEvent.obtain(time, System.currentTimeMillis(), MotionEvent.ACTION_UP, 20.0f, height - 1, 0);
+        onTouchEvent(motionEvent);
+        setOnViewFlipListener(this);
     }
 }

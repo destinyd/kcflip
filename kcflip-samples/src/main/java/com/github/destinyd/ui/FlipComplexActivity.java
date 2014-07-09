@@ -1,11 +1,8 @@
 package com.github.destinyd.ui;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.*;
 import com.github.destinyd.KCFlip;
 import com.github.destinyd.R;
@@ -31,8 +28,8 @@ public class FlipComplexActivity extends Activity {
                 kcFlip.to_brief();
             }
         });
-        kcFlip.setViewBrief(ly_brief);
-        kcFlip.setViewDetail(sv_detail);
+        kcFlip.set_brief_view(ly_brief);
+        kcFlip.set_detail_view(sv_detail);
 //        setContentView(kcFlip, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
     }
 
@@ -44,7 +41,7 @@ public class FlipComplexActivity extends Activity {
 
     @Override
     protected void onPause() {
-        super.onPause();
         kcFlip.onPause();
+        super.onPause();
     }
 }

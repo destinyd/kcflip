@@ -26,8 +26,8 @@ public class FlipTextViewActivity extends Activity {
         textView1.setText("测试文字2");
         textView1.setGravity(Gravity.CENTER);
         textView1.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
-        kcFlip.setViewBrief(textView);
-        kcFlip.setViewDetail(textView1);
+        kcFlip.set_brief_view(textView);
+        kcFlip.set_detail_view(textView1);
 
         setContentView(kcFlip);
     }
@@ -42,7 +42,6 @@ public class FlipTextViewActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // TODO Auto-generated method stub
         if (item.getItemId() == R.id.action_to_brief) {
             kcFlip.to_brief();
         }
@@ -57,7 +56,7 @@ public class FlipTextViewActivity extends Activity {
 
     @Override
     protected void onPause() {
-        super.onPause();
         kcFlip.onPause();
+        super.onPause();
     }
 }

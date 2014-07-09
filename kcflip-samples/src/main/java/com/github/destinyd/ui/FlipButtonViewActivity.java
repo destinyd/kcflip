@@ -3,14 +3,9 @@ package com.github.destinyd.ui;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import com.github.destinyd.KCFlip;
-import com.github.destinyd.R;
 
 public class FlipButtonViewActivity extends Activity {
     KCFlip kcFlip;
@@ -38,8 +33,8 @@ public class FlipButtonViewActivity extends Activity {
                 kcFlip.to_brief();
             }
         });
-        kcFlip.setViewBrief(btn_to_detail);
-        kcFlip.setViewDetail(btn_to_brief);
+        kcFlip.set_brief_view(btn_to_detail);
+        kcFlip.set_detail_view(btn_to_brief);
 
         setContentView(kcFlip);
     }
@@ -52,7 +47,7 @@ public class FlipButtonViewActivity extends Activity {
 
     @Override
     protected void onPause() {
-        super.onPause();
         kcFlip.onPause();
+        super.onPause();
     }
 }

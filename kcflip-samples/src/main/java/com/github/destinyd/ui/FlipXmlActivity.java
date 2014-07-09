@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.github.destinyd.KCFlip;
 import com.github.destinyd.R;
@@ -27,8 +25,8 @@ public class FlipXmlActivity extends Activity {
         TextView textView1 = new TextView(this);
         textView1.setText("测试文字2");
         textView1.setGravity(Gravity.CENTER);
-        kcFlip.setViewBrief(textView);
-        kcFlip.setViewDetail(textView1);
+        kcFlip.set_brief_view(textView);
+        kcFlip.set_detail_view(textView1);
     }
 
     @Override
@@ -41,7 +39,6 @@ public class FlipXmlActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // TODO Auto-generated method stub
         if (item.getItemId() == R.id.action_to_brief) {
             kcFlip.to_brief();
         }
@@ -56,7 +53,7 @@ public class FlipXmlActivity extends Activity {
 
     @Override
     protected void onPause() {
-        super.onPause();
         kcFlip.onPause();
+        super.onPause();
     }
 }
