@@ -7,17 +7,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.github.destinyd.KCFlip;
+import com.github.destinyd.FlipBriefLayout;
 import com.github.destinyd.R;
 
 public class FlipTextViewActivity extends Activity {
-    KCFlip kcFlip;
+    FlipBriefLayout flipBriefLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        kcFlip = new KCFlip(this);
+        flipBriefLayout = new FlipBriefLayout(this);
         TextView textView = new TextView(this);
         textView.setText("测试文字1");
         textView.setGravity(Gravity.CENTER);
@@ -26,10 +26,10 @@ public class FlipTextViewActivity extends Activity {
         textView1.setText("测试文字2");
         textView1.setGravity(Gravity.CENTER);
         textView1.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
-        kcFlip.set_brief_view(textView);
-        kcFlip.set_detail_view(textView1);
+        flipBriefLayout.set_brief_view(textView);
+        flipBriefLayout.set_detail_view(textView1);
 
-        setContentView(kcFlip);
+        setContentView(flipBriefLayout);
     }
 
     @Override
@@ -43,7 +43,7 @@ public class FlipTextViewActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_to_brief) {
-            kcFlip.to_brief();
+            flipBriefLayout.to_brief();
         }
         return super.onContextItemSelected(item);
     }
@@ -51,12 +51,12 @@ public class FlipTextViewActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        kcFlip.onResume();
+        flipBriefLayout.onResume();
     }
 
     @Override
     protected void onPause() {
-        kcFlip.onPause();
+        flipBriefLayout.onPause();
         super.onPause();
     }
 }

@@ -6,17 +6,17 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-import com.github.destinyd.KCFlip;
+import com.github.destinyd.FlipBriefLayout;
 import com.github.destinyd.R;
 
 public class FlipXmlActivity extends Activity {
-    KCFlip kcFlip;
+    FlipBriefLayout flipBriefLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.xml_layout);
-        kcFlip = (KCFlip) findViewById(R.id.kcflip);
+        flipBriefLayout = (FlipBriefLayout) findViewById(R.id.kcflip);
 
         TextView textView = new TextView(this);
         textView.setText("测试文字1");
@@ -25,8 +25,8 @@ public class FlipXmlActivity extends Activity {
         TextView textView1 = new TextView(this);
         textView1.setText("测试文字2");
         textView1.setGravity(Gravity.CENTER);
-        kcFlip.set_brief_view(textView);
-        kcFlip.set_detail_view(textView1);
+        flipBriefLayout.set_brief_view(textView);
+        flipBriefLayout.set_detail_view(textView1);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class FlipXmlActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_to_brief) {
-            kcFlip.to_brief();
+            flipBriefLayout.to_brief();
         }
         return super.onContextItemSelected(item);
     }
@@ -48,12 +48,12 @@ public class FlipXmlActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        kcFlip.onResume();
+        flipBriefLayout.onResume();
     }
 
     @Override
     protected void onPause() {
-        kcFlip.onPause();
+        flipBriefLayout.onPause();
         super.onPause();
     }
 }

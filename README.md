@@ -17,8 +17,8 @@ Android KCFlip
 
 ##需求所需要方法说明
 ```
-public void setViewBrief(View view);
-public void setViewDetail(View view);
+public void set_brief_view(View view);
+public void set_detail_view(View view);
 ```
 这两个方法用来设置摘要和详细视图
 

@@ -2,7 +2,6 @@ package com.github.destinyd;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,21 +11,21 @@ import com.github.destinyd.flip.FlipViewController;
 /**
  * Created by dd on 14-6-5.
  */
-public class KCFlip extends FlipViewController implements FlipViewController.ViewFlipListener {
+public class FlipBriefLayout extends FlipViewController implements FlipViewController.ViewFlipListener {
 
     private static final String TAG = "KCFlip";
     View viewBrief = null;
     View viewDetail = null;
 
-    public KCFlip(Context context) {
+    public FlipBriefLayout(Context context) {
         this(context, null);
     }
 
-    public KCFlip(Context context, AttributeSet attrs) {
+    public FlipBriefLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public KCFlip(Context context, AttributeSet attrs, int defStyle) {
+    public FlipBriefLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
