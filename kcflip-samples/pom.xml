@@ -8,7 +8,7 @@
     <parent>
         <groupId>com.github.destinyd</groupId>
         <artifactId>kcflip-parent</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.2-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -45,7 +45,7 @@
             <groupId>com.github.destinyd</groupId>
             <artifactId>kcflip</artifactId>
             <type>apklib</type>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${project.parent.version}</version>
         </dependency>
     </dependencies>
 
