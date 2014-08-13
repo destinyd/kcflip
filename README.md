@@ -2,6 +2,12 @@ Android KCFlip
 ============================
 本Android组件主要用于封面显示，向上划像翻书一样切换到详细页显示（详细页可以是ScrollView）
 
+## 安装KCFlip
+```
+git clone https://github.com/mindpin/kcflip
+cd kcflip
+mvn clean install
+```
 
 ##如何引用此组件：
 已经独立成maven项目，mvn install之后可以在项目maven添加以下依赖引用：
